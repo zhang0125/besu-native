@@ -470,8 +470,8 @@ public class DBTest extends TestCase {
 
     }
 
-    //@Test release-1.8 not fixed
-    public void notTestIssue40_1() throws IOException {
+    @Test
+    public void testIssue40_1() throws IOException {
         // incorrect behaviour.., but it shouldn't crash JVM:
         // test: seekToLast() -> next() -> prev()
         Options options = new Options().createIfMissing(true);
@@ -497,8 +497,8 @@ public class DBTest extends TestCase {
         db.close();
     }
 
-    //@Test release-1.8 not fixed
-    public void notTestIssue40_2() throws IOException {
+    @Test
+    public void testIssue40_2() throws IOException {
         // incorrect behaviour.., but it shouldn't crash JVM
         // test: seekToLast() -> next() -> peekPrev()
         Options options = new Options().createIfMissing(true);
@@ -556,8 +556,8 @@ public class DBTest extends TestCase {
         return result;
     }
 
-    //@Test release-1.8 not fixed
-    public void notTestIssue40_3() throws IOException {
+    @Test
+    public void testIssue40_3() throws IOException {
         // test seek(after last record) -> peekPrev()/prev()
         Options options = new Options().createIfMissing(true);
         options.comparator(byteComparator);
@@ -589,8 +589,8 @@ public class DBTest extends TestCase {
         db.close();
     }
 
-    //@Test release-1.8 not fixed
-    public void notTestSeekAndIterator() throws IOException {
+    @Test
+    public void testSeekAndIterator() throws IOException {
         final byte[] key_001 = newKey((byte) 1);
         final byte[] key_025 = newKey((byte) 25);
         final byte[] key_050 = newKey((byte) 50);
@@ -774,8 +774,8 @@ public class DBTest extends TestCase {
         db.close();
     }
 
-    //@Test release-1.8 not fixed
-    public void notTestIteratorNegative() throws IOException {
+    @Test
+    public void testIteratorNegative() throws IOException {
         final byte[] key_001 = newKey((byte) 1);
         final byte[] key_025 = newKey((byte) 25);
         final byte[] key_050 = newKey((byte) 50);
